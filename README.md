@@ -1,12 +1,12 @@
 # ParallelTcpClientConnectionApp
-* The app is example of that dynamic defined tcp clients connect via parallel.
+* The app is an example of that dynamic defined tcp clients connect via parallel.
 * First of all, you should enter the **ip** and **port** information on the screen where you want to establish a socket connection.
 * Then, by clicking the **Connect** button, it will try to connect simultaneously to the defined ip-port end connections.
 * In each line, the related ip-port connection status will be displayed as a picture and description.
 * You must click the **Disconnect** button to close all connections.
 * For successful connections, the **Send Data** button will be active.
 * You can send data to the terminals with active connection by clicking the **Send Data** button.
-* A ping-pong-like structure has been created to check whether the connection is broken or not in the application. For this, the TcpClientEx class was derived from the TcpClien class and the Connect, Close and Dispose methods were overrrided. In the Connect method, the timer of the instance is started and checks the connection status by checking the ping-pong tests at regular intervals. If the connection is broken, it throws the OnDisconnect event.
+* A ping-pong-like structure has been created to check whether the connection is broken or not in the application. For this, the TcpClientEx class was derived from the TcpClient class and the Connect, Close and Dispose methods were overrrided. In the Connect method, the timer of the instance is started and checks the connection status by checking the ping-pong tests at regular intervals. If the connection is broken, it throws the OnDisconnect event.
 
  ```csharp
  public TcpClientEx(int rowIndex):base()
