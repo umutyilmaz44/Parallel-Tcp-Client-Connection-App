@@ -139,7 +139,7 @@ namespace ParallelTcpClientConnectionApp
             }
             try
             {
-                if (clientRowInfo.IpAvailabel && clientRowInfo.PortAvailabel && clientRowInfo.client.ConnectAsyncEx(clientRowInfo.ip, clientRowInfo.port).Wait(5000))
+                if (clientRowInfo.IpAvailabel && clientRowInfo.PortAvailabel && clientRowInfo.client.ConnectAsync(clientRowInfo.ip, clientRowInfo.port).Wait(5000))
                 {
                     isConnected = true;
                     resultImage = ParallelTcpClientConnectionApp.Properties.Resources.port_open_32x32;

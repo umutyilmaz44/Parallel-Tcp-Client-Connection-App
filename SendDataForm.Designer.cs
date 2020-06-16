@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SendDataForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblData = new System.Windows.Forms.Label();
-            this.btnSendData = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnSendData = new System.Windows.Forms.Button();
+            this.lblData = new System.Windows.Forms.Label();
             this.txtData = new System.Windows.Forms.RichTextBox();
             this.lblResult = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -49,14 +49,15 @@
             this.panel1.Size = new System.Drawing.Size(284, 35);
             this.panel1.TabIndex = 0;
             // 
-            // lblData
+            // btnClose
             // 
-            this.lblData.AutoSize = true;
-            this.lblData.Location = new System.Drawing.Point(27, 19);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(30, 13);
-            this.lblData.TabIndex = 2;
-            this.lblData.Text = "Data";
+            this.btnClose.Location = new System.Drawing.Point(143, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(57, 29);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSendData
             // 
@@ -68,15 +69,14 @@
             this.btnSendData.UseVisualStyleBackColor = true;
             this.btnSendData.Click += new System.EventHandler(this.btnSendData_Click);
             // 
-            // btnClose
+            // lblData
             // 
-            this.btnClose.Location = new System.Drawing.Point(143, 3);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(57, 29);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.lblData.AutoSize = true;
+            this.lblData.Location = new System.Drawing.Point(27, 19);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(30, 13);
+            this.lblData.TabIndex = 2;
+            this.lblData.Text = "Data";
             // 
             // txtData
             // 
@@ -110,7 +110,8 @@
             this.MinimizeBox = false;
             this.Name = "SendDataForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "SendDataForm";
+            this.Text = "Send Data";
+            this.Load += new System.EventHandler(this.SendDataForm_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

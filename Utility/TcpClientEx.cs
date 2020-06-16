@@ -23,7 +23,7 @@ namespace ParallelTcpClientConnectionApp.Utility
             tmr.Elapsed += Tmr_Elapsed;            
         }
 
-        public async Task ConnectAsyncEx(string hostname, int port)
+        public new async Task ConnectAsync(string hostname, int port)
         {
             this.Client.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.KeepAlive, true);
             await base.ConnectAsync(hostname, port);
@@ -31,13 +31,13 @@ namespace ParallelTcpClientConnectionApp.Utility
             tmr.Start();            
         }
 
-        public void Close()
+        public new void Close()
         {
             base.Close();
             tmr.Stop();
         }
 
-        public void Dispose()
+        public new void Dispose()
         {
             base.Dispose();
             tmr.Dispose();

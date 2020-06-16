@@ -24,6 +24,11 @@ namespace ParallelTcpClientConnectionApp
             this.clientRowInfo = clientRowInfo;
         }
 
+        private void SendDataForm_Load(object sender, EventArgs e)
+        {
+            this.Text += string.Format(" ({0}:{1})", clientRowInfo.ip, clientRowInfo.port);
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
