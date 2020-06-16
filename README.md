@@ -6,6 +6,7 @@
 * You must click the **Disconnect** button to close all connections.
 * For successful connections, the **Send Data** button will be active.
 * You can send data to the terminals with active connection by clicking the **Send Data** button.
+* A ping-pong-like structure has been created to check whether the connection is broken or not in the application.
 
 ## Screenshots
 ![app-screenshot-03](https://user-images.githubusercontent.com/42136540/84788192-89afbc80-aff7-11ea-80a9-ee9957e27fec.PNG)
